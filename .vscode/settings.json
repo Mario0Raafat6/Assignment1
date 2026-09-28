@@ -1,0 +1,10 @@
+{
+  "C_Cpp.default.configurationProvider": "",
+  "files.associations": {
+    "iostream": "cpp"
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "cpp": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Professional\\MSBuild\\Current\\Bin\\MSBuild.exe\" \"C:\\Users\\Mario\\source\\repos\\Assignment1\\Project3\\Project3.sln\" /p:Configuration=Debug /p:Platform=x64 /v:m && cd /d \"C:\\Users\\Mario\\source\\repos\\Assignment1\\Project3\\Project3\" && \"C:\\Users\\Mario\\source\\repos\\Assignment1\\Project3\\x64\\Debug\\Project3.exe\""
+  }
+}
