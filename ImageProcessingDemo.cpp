@@ -4,7 +4,41 @@
 #include <iostream>
 using namespace std;
 #include "Image_Class.h"
-
+void flipImage(Image& image, int direction)
+{
+    if (direction == 1)
+    {
+        // Horizontal flip
+        for (int i = 0; i < image.width / 2; i++)
+        {
+            for (int j = 0; j < image.height; j++)
+            {
+                for (int k = 0; k < 3; k++)
+                {
+                    int temp = image(i, j, k);
+                    image(i, j, k) = image(image.width - 1 - i, j, k);
+                    image(image.width - 1 - i, j, k) = temp;
+                }
+            }
+        }
+    }
+    else if (direction == 2)
+    {
+        // Vertical flip
+        for (int i = 0; i < image.width; i++)
+        {
+            for (int j = 0; j < image.height / 2; j++)
+            {
+                for (int k = 0; k < 3; k++)
+                {
+                    int temp = image(i, j, k);
+                    image(i, j, k) = image(i, image.height - 1 - j, k);
+                    image(i, image.height - 1 - j, k) = temp;
+                }
+            }
+        }
+    }
+}
 int main() {
     string filename;
     cout << "Pls enter colored image name to turn to gray scale: ";
