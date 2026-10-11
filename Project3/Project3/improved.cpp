@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <cmath>
 #include "Image_Class.h"
 using namespace std;
 
@@ -252,8 +254,113 @@ void purple(Image& img) {
         }
     }
 }
-void resize (Image& img){}
+void wanotvfilter(Image& img) {
+    int scanlineInterval = 2;
+    float scanlineDarkness = 0.5f;
+    int noiseAmount = 12;
 
+    for (int i = 0; i < img.width; i++) {
+        for (int j = 0; j < img.height; j++) {
+            int noise = rand() % (2 * noiseAmount + 1) - noiseAmount;
+            for (int k = 0; k < 3; k++) {
+                int val = (int)img(i, j, k) + noise;
+                val = max(0, min(255, val));
+              
+                if (j % scanlineInterval == 0) {
+                    val = (int)(val * scanlineDarkness);
+                }
+
+                img(i, j, k) = (unsigned char)val;
+            }
+        }
+    }
+    cout << "Wanotv filter applied." << endl;
+}
+void edgeDetection(Image& img) {
+    int width = img.width;
+    int height = img.height;
+
+    vector<vector<int>> gray(height, vector<int>(width));
+
+    for (int y = 0; y < height; y++) {
+        for (int x = 0; x < width; x++) {
+            unsigned char r = img.getPixel(x, y, 0);
+            unsigned char g = img.getPixel(x, y, 1);
+            unsigned char b = img.getPixel(x, y, 2);
+
+            gray[y][x] = (int)(0.299 * r + 0.587 * g + 0.114 * b);
+        }
+    }
+
+    int gx[3][3] = {
+        {-1, 0, 1},
+        {-2, 0, 2},
+        {-1, 0, 1}
+    };
+
+    int gy[3][3] = {
+        {-1, -2, -1},
+        { 0,  0,  0},
+        { 1,  2,  1}
+    };
+
+    Image outputImg(width, height);
+
+    for (int y = 1; y < height - 1; y++) {
+        for (int x = 1; x < width - 1; x++) {
+            int sumX = 0;
+            int sumY = 0;
+
+            for (int k = -1; k <= 1; k++) {
+                for (int l = -1; l <= 1; l++) {
+                    sumX += gray[y + k][x + l] * gx[k + 1][l + 1];
+                    sumY += gray[y + k][x + l] * gy[k + 1][l + 1];
+                }
+            }
+
+            int val = (int)sqrt((double)(sumX * sumX + sumY * sumY));
+            if (val > 255) val = 255;
+
+            unsigned char edgeVal = (unsigned char)val;
+            outputImg.setPixel(x, y, 0, edgeVal);
+            outputImg.setPixel(x, y, 1, edgeVal);
+            outputImg.setPixel(x, y, 2, edgeVal);
+        }
+    }
+
+    img = outputImg;
+    cout << "Edge Detection completed successfully!" << endl;
+}
+void resize(Image& img) {
+    int newWidth, newHeight;
+    cout << "Enter new width: ";
+    cin >> newWidth;
+    cout << "Enter new height: ";
+    cin >> newHeight;
+	Image resized(newWidth, newHeight);
+	for (int y = 0; y < newHeight; y++) {
+		for (int x = 0; x < newWidth; x++) {
+			int origX = x * img.width / newWidth;
+			int origY = y * img.height / newHeight;
+			for (int c = 0; c < 3; c++) {
+				resized.setPixel(x, y, c, img.getPixel(origX, origY, c));
+			}
+		}
+	}
+	img = resized;
+}
+void infrared(Image& img) {
+	for (int i = 0; i < img.width; i++) {
+		for (int j = 0; j < img.height; j++) {
+			int r = img(i, j, 0) * 1000;
+			int g = img(i, j, 1) ;
+			int b = img(i, j, 2) ;
+			img(i, j, 0) = (r > 255) ? 255 : r;
+			img(i, j, 1) = g;
+			img(i, j, 2) = b;
+		}
+	}
+}
 
 int main() {
     string filename;
@@ -274,7 +381,10 @@ int main() {
     cout << "8. Flip\n";
 	cout << "9. Crop\n";
 	cout << "10. Purple\n";
-
+	cout << "11. Wanotv Filter\n";
+	cout << "12. Edge Detection\n";
+	cout << "13. Resize\n";
+	cout << "14. Infrared\n";
     int choice;
     cin >> choice;
 
@@ -307,6 +417,19 @@ int main() {
 	}
 	else if (choice == 10) {
 		purple(img);
+	}
+	else if (choice == 11) {
+		wanotvfilter(img);
+	}
+	else if (choice == 12) {
+		edgeDetection(img);
+	}
+	else if (choice == 13) {
+	
+		resize(img);
+	}
+	else if (choice == 14) {
+		infrared(img);
 	}
     else {
         cout << "Invalid choice." << endl;
