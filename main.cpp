@@ -1,48 +1,76 @@
 #include <iostream>
 #include <cmath>
-#include <cstdlib>
+#include <vector>
 #include "Image_Class.h"
 
 using namespace std;
 
 int main() {
     string inputFile = "input.bmp";
-    string outputFile = "wano_tv_output.bmp";
+    string outputFile = "output_edges.bmp";
 
     Image img;
     try {
         img.loadNewImage(inputFile);
     } catch (const exception& e) {
-        cerr << "Error: " << e.what() << endl;
+        cerr << "Error loading image: " << e.what() << endl;
         return 1;
     }
 
-    Image outputImg(img.width, img.height);
+    int width = img.width;
+    int height = img.height;
 
-    int scanlineInterval = 2;
-    float scanlineDarkness = 0.5f;
-    int noiseAmount = 12;
+    vector<vector<int> > gray(height, vector<int>(width));
 
-    for (int y = 0; y < img.height; y++) {
-        for (int x = 0; x < img.width; x++) {
-            int noise = rand() % (2 * noiseAmount + 1) - noiseAmount;
+    for (int y = 0; y < height; y++) {
+        for (int x = 0; x < width; x++) {
+            unsigned char r = img.getPixel(x, y, 0);
+            unsigned char g = img.getPixel(x, y, 1);
+            unsigned char b = img.getPixel(x, y, 2);
 
-            for (int c = 0; c < 3; c++) {
-                int val = (int)img.getPixel(x, y, c) + noise;
-                val = max(0, min(255, val));
+            gray[y][x] = (int)(0.299 * r + 0.587 * g + 0.114 * b);
+        }
+    }
 
-                if (y % scanlineInterval == 0) {
-                    val = (int)(val * scanlineDarkness);
+    int gx[3][3] = {
+        {-1, 0, 1},
+        {-2, 0, 2},
+        {-1, 0, 1}
+    };
+
+    int gy[3][3] = {
+        {-1, -2, -1},
+        { 0,  0,  0},
+        { 1,  2,  1}
+    };
+
+    Image outputImg(width, height);
+
+    for (int y = 1; y < height - 1; y++) {
+        for (int x = 1; x < width - 1; x++) {
+            int sumX = 0;
+            int sumY = 0;
+
+            for (int k = -1; k <= 1; k++) {
+                for (int l = -1; l <= 1; l++) {
+                    sumX += gray[y + k][x + l] * gx[k + 1][l + 1];
+                    sumY += gray[y + k][x + l] * gy[k + 1][l + 1];
                 }
-
-                outputImg.setPixel(x, y, c, (unsigned char)val);
             }
+
+            int val = (int)sqrt((double)(sumX * sumX + sumY * sumY));
+            if (val > 255) val = 255;
+
+            unsigned char edgeVal = (unsigned char)val;
+            outputImg.setPixel(x, y, 0, edgeVal);
+            outputImg.setPixel(x, y, 1, edgeVal);
+            outputImg.setPixel(x, y, 2, edgeVal);
         }
     }
 
     try {
         outputImg.saveImage(outputFile);
-        cout << "Wano TV filter applied successfully! Saved to " << outputFile << endl;
+        cout << "Edge Detection completed successfully! Saved to " << outputFile << endl;
     } catch (const exception& e) {
         cerr << "Error saving image: " << e.what() << endl;
         return 1;
