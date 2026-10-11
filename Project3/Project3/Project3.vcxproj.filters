@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FileName.cpp">
+    <ClCompile Include="improved.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -31,8 +31,89 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="mario.bmp">
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\APlus.jpg">
       <Filter>Resource Files</Filter>
-    </None>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\arrow.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\BlueCar.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\building.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Cry.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\FellAsleep.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\fruit.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\gamma_adjusted_image.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\House.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\infrared_image.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Jerry.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\luffy.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\mario.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\mario.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\night3.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Nour.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\old_tv_image.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\parots.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\photographer.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\purple_imageLuffy.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\purple_imagewano.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\samurai.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Skeleton.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Superman.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\toy1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\toy2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Wano 2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Water 7.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

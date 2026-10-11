@@ -155,7 +155,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FileName.cpp" />
+    <ClCompile Include="improved.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Image_Class.h" />
@@ -163,9 +163,34 @@
     <ClInclude Include="stb_image_write.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="mario.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\APlus.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\arrow.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\BlueCar.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\building.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Cry.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\FellAsleep.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\fruit.bmp" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\gamma_adjusted_image.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\House.bmp" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\infrared_image.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Jerry.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\luffy.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\mario.bmp" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\mario.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\night3.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Nour.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\old_tv_image.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\parots.bmp" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\photographer.bmp" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\purple_imageLuffy.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\purple_imagewano.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\samurai.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Skeleton.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Superman.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\toy1.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\toy2.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Wano 2.jpg" />
+    <Image Include="D:\Mario\university\CS213-2026-2027-Assignment1-v4\CS213-2026-2027-Assignemnt1-SampleImages\Water 7.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,2 +1,9 @@
-﻿  FileName.cpp
+﻿  improved.cpp
+C:\Users\Mario\source\repos\Assignment1\Project3\Project3\improved.cpp(23,20): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Mario\source\repos\Assignment1\Project3\Project3\improved.cpp(30,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Mario\source\repos\Assignment1\Project3\Project3\improved.cpp(175,31): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Mario\source\repos\Assignment1\Project3\Project3\improved.cpp(187,31): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Mario\source\repos\Assignment1\Project3\Project3\improved.cpp(246,19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Mario\source\repos\Assignment1\Project3\Project3\improved.cpp(247,19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Mario\source\repos\Assignment1\Project3\Project3\improved.cpp(248,19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
   Project3.vcxproj -> C:\Users\Mario\source\repos\Assignment1\Project3\x64\Debug\Project3.exe
